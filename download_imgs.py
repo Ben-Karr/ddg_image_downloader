@@ -10,7 +10,7 @@ IMAGE_SUFF = 'jpeg,jpg,png,bmp,webp'.split(',')
 parser = argparse.ArgumentParser(description='Search and download images from duckduckgo.com')
 parser.add_argument('key', type=str, help='Term to search for')
 parser.add_argument('max_n', type=int, help='Maximum number of images to download')
-parser.add_argument('folder', type=str, help='Destination folder')
+parser.add_argument('-f', '--folder', type=str, help='Destination folder', default='.')
 args = parser.parse_args()
 
 if __name__ == "__main__":
